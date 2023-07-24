@@ -1,0 +1,327 @@
+/* fonts  */
+@font-face {
+    font-family: lalezar;
+    src: url('../fonts/Lalezar-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: normal;
+}
+
+@font-face {
+    font-family: shubbak;
+    src: url('../fonts/Shubbak-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: normal;
+}
+
+@font-face {
+    font-family: shubbakbold;
+    src: url('../fonts/Shubbak-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: normal;
+}
+
+
+@font-face {
+    font-family: g aseman;
+    src: url('../fonts/g aseman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: normal;
+}
+
+@font-face {
+    font-family: casa;
+    src: url('../fonts/Casablanca.Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: normal;
+}
+
+@font-face {
+    font-family: vazirmatn;
+    src: url('../fonts/Vazirmatn-ExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: normal;
+}
+
+@font-face {
+    font-family: link;
+    src: url('../fonts/A.Afsaneh.Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: normal;
+}
+
+@font-face {
+    font-family: nabigha;
+    src: url('../fonts/Mj_Nabigha\ Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: normal;
+}
+
+/* normalize */
+* {
+    direction: rtl;
+    text-align: right;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: vazirmatn;
+}
+
+h5 {
+    font-size: 25px;
+}
+
+h6{
+    font-size: 20px;
+}
+
+h3 { 
+    font-size: 35px;
+}
+
+p {
+    font-size: 20px;
+}
+
+span {
+    font-size: 17px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: #86b7fe;
+}
+
+/* ---------- */
+/* Media  */
+/* ---------- */
+
+@media (max-width: 320px) {
+    .navbar_top {
+        display: none;
+    }
+}
+
+@media (max-width: 537px) {
+    .navbar_right_item {
+        display: none;
+    }
+}
+
+@media (max-width: 767px){
+    .nav_top_item #social_links, .nav_top_item_styles span {
+        display: none;
+    }
+    .nav_top_item_styles {
+        padding: 0 !important;
+    }
+    .nav_top_item_styles:nth-child(3) {
+        padding: 5px 0 0 13px !important;
+    }
+    .logo {
+        padding-left: 0 !important;
+    }
+    .navbar_mid_right_wrapper {
+        padding: 0 !important;
+    }
+}
+
+@media (max-width: 887px){
+    .navbar_mid_right .nav-link,.navbar_mid_left .nav-link {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+} 
+
+@media (max-width: 1125px){
+    .navbar_mid_left a {
+        display: none !important;
+    }
+    .logo {
+        padding-left: 0 !important;
+    }
+
+}
+
+/* ---------- */
+/* Utility  */
+/* ---------- */
+.line_hover::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: black;
+    position: absolute;
+    transition-duration: 0.3s;
+    right: 5%;   
+}
+
+.line_hover:hover:after {
+    width: 60%;
+}
+
+.line_hover_active::after {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: black;
+    position: absolute;
+    transition-duration: 0.3s; 
+}
+
+.line_hover_active:hover::after {
+    width: 100%;
+}
+
+/* ---------- */
+/* navbar */
+/* ---------- */
+
+.navbar_top {
+    height: 30px;
+    width: 100%;
+    background-color: black;
+}
+
+.nav_top_item ul {
+    display: inline-flex;
+    padding-top: 6px;
+    list-style: none;
+    font-size: 10px;
+    color: white;
+    flex-direction: row;
+}
+
+.nav_top_item ul .btn {
+    color: white;
+    direction: ltr;
+    font-size: 11px; 
+    padding: 4px 13px !important; 
+}
+
+.dropdown-toggle::after {
+    vertical-align: 0 !important;
+}
+
+.nav_top_item ul i {
+    padding: 9px 13px 0 8px;
+}
+
+.nav_top_item ul:nth-child(1) {
+    padding-top: 0 !important; 
+}
+
+.nav_top_item ul a {
+    color: white;
+}
+
+.nav_top_item ul span {
+    font-size: 15px !important;
+}
+
+/* ---------- */
+/* navbar mid */
+/* ---------- */
+
+.logo {
+    padding-left: 215px;
+   
+}
+
+.logo > a {
+    width: 120px;
+}
+
+.logo > a img {
+    width: 100%;
+}
+
+.carousel-item {
+    height:calc(97vh - 40px);
+    background: no-repeat center center scroll;
+    background-size: cover;
+    object-fit: cover !important;
+}
+
+#carousel_wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar_mid {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+}
+
+.offcanvas-body , .offcanvas-header{
+    background-image: url("../assets/header2.jpg");
+    
+}
+
+.carousel-indicators {
+    justify-content: flex-end;
+    bottom: 20px;
+    flex-direction: column;
+}
+
+.carousel-indicators button {
+   border-radius: 50%;
+   height: 10px !important;
+   width: 10px !important;
+   margin: auto 15px !important; 
+}
+
+.navbar_mid_right .navbar_mid_item {
+    position: relative;
+}
+
+.navbar_mid_right .nav-link {
+    color: black;
+    padding-bottom: 2px;
+    font-size: 14px !important;
+    font-family: shubbakbold;
+}
+
+
+.navbar_mid_right .nav-link:hover {
+    color: royalblue;
+}
+
+.navbar_mid_left .nav-link {
+    color: black;
+    padding-bottom: 2px;
+}
+
+.navbar_mid_left .nav-link:hover {
+    color: royalblue;
+}
+
+.navbar_mid_left .nav_icon{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.navbar_mid_item .navbar_right_item {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
